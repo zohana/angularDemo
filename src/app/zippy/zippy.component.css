@@ -1,0 +1,12 @@
+.panel {
+    margin: 0;
+}
+
+.notShow {
+    display: none;
+}
+
+.glyphicon-chevron-down,
+.glyphicon-chevron-up {
+    float: right;
+}

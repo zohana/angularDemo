@@ -1,0 +1,11 @@
+.glyphicon {
+    font-size: 30px;
+}
+
+.glyphicon-star {
+    color: yellow;
+}
+
+.glyphicon-star-empty {
+    color: gray;
+}

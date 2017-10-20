@@ -1,0 +1,73 @@
+<h1>Angular</h1>
+<app-courses></app-courses>
+<author></author>
+<binding></binding>
+<hr>
+<br>
+<pipe-demo></pipe-demo>
+<hr>
+<br>
+<app-favourite [isFavourite]="post.isClicked" (change)="onChange($event)"></app-favourite>
+
+<hr>
+<br>
+<string-format></string-format>
+
+<hr>
+<br>
+<bootstrap-panel>
+    <ng-container class="heading">Heading</ng-container>
+    <div class="body">Body</div>
+</bootstrap-panel>
+
+<hr>
+<br>
+<like [isLiked]="tweet.isLiked" [likesCount]="tweet.likesCount"></like>
+<hr>
+<br>
+<if-directive></if-directive>
+
+<hr>
+<br>
+<h2>Switch Directive</h2>
+<switch-directive></switch-directive>
+
+<hr>
+<br>
+<h2>For Directive</h2>
+<for-directive></for-directive>
+
+<hr>
+<br>
+<h2>Custom Directive Input Format</h2>
+<!-- <input [appInputFormat]='uppercase' /> -->
+
+<hr>
+<br>
+<h2>Zippy component</h2>
+<zippy title="Shipping Details">
+    Shipping Details Content...
+</zippy>
+<zippy title="Billing Details">
+    Billing Details Content...
+</zippy>
+
+<hr>
+<br>
+<h2>Template Driven Forms 1</h2>
+<contact-form></contact-form>
+
+<hr>
+<br>
+<h2>Template Driven Forms 2 </h2>
+<course-form></course-form>
+
+<hr>
+<br>
+<h2>Reactive Forms </h2>
+<signup-form></signup-form>
+
+<hr>
+<br>
+<h2>Reactive Forms : Form Array</h2>
+<course-list></course-list>

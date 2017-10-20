@@ -1,0 +1,24 @@
+<h2>{{title}}</h2>
+
+<div>
+    <img [src]='imagePath' [alt]='imageName' />
+    <img src="{{imagePath}}" alt="{{imageName}}" />
+
+</div>
+<br>
+<br>
+<div>
+    <button type="button" (click)="onClick()" class="btn" [class.active]="isActive" [class.btn-success]="isActive" [class.btn-warning]="!isActive">{{ btnText }}</button>
+</div>
+
+<br>
+<br>
+<div>
+    <button class="btn" (click)="onClickButtonTwo()" [class.click]="isClicked" [class.click]="isClicked">{{btnTwoText}}</button>
+</div>
+
+<br>
+<br>
+<input type="text" [(ngModel)]="email" (keyup.enter)="onKeyUp(email)" />
+<br>
+<span>{{textBox}}</span>

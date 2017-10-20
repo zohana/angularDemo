@@ -1,0 +1,5 @@
+<h2>String format demo</h2>
+
+<input type="text" class="form-control" [(ngModel)]="nameOfTheMovie" (keyup)="onKeyUp(nameOfTheMovie)" />
+<br>
+<span class="text-danger">{{nameOfTheMovie | formatString}}</span>

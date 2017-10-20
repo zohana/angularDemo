@@ -1,0 +1,41 @@
+<h4> Using Index</h4>
+<ul *ngFor="let course of courses; index as i">
+    <li>{{i}} - {{ course.name }}</li>
+</ul>
+
+<h4>Using Even Odd</h4>
+<ul *ngFor="let course of courses; even as isEven">
+    <li> {{ course.name }} <span *ngIf="isEven">--> Even</span></li>
+</ul>
+
+<h4>Using TrackBy</h4>
+
+<button class="btn btn-primary" (click)="loadCourses()">Load Courses</button>
+
+<ul *ngFor="let moreCourse of moreCourses ; trackBy:trackByCourse">
+    <li> {{ moreCourse.name }} </li>
+</ul>
+<br>
+<h4> Remove Course </h4>
+<br>
+
+<ul *ngFor="let course of courses; index as i">
+    <li>
+        {{i}} - {{ course.name }}
+        <button class="btn" (click)="removeCourse(i)"><span class="glyphicon glyphicon-trash"></span></button>
+    </li>
+</ul>
+
+<br>
+<h4> Add Course </h4>
+<button class="btn" (click)="addCourse()">Add Courses</button>
+<button class="btn" (click)="onTruncate()"><span class="glyphicon glyphicon-resize-horizontal"></span></button>
+
+<ul *ngFor="let course of courses; trackBy:trackByCourseExpand">
+    <li *ngIf="isHidden">
+        {{ course.name | summary: 4 }}
+    </li>
+    <li *ngIf="!isHidden">
+        {{ course.name }}
+    </li>
+</ul>

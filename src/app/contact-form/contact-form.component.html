@@ -1,0 +1,53 @@
+<form #f="ngForm" (ngSubmit)="submit(f)">
+    <div ngModelGroup="contact" #contact="ngModelGroup">
+        <span *ngIf="contact.touched && !contact.valid">....</span>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input ngModel name="firstName" #firstName="ngModel" id="firstName" required minlength="3" maxlength="10" pattern="Iman" type="text" (change)="log(firstName)" class="form-control">
+            <div class="text-muted" *ngIf="firstName.touched && !firstName.valid">
+                <span *ngIf="firstName.errors.required">First Name is Required.</span>
+                <span *ngIf="firstName.errors.minlength">Minimum length is {{firstName.errors.minlength.requiredLength}}.</span><br>
+                <span *ngIf="firstName.errors.maxlength">Maximum length is 10.</span>
+                <span *ngIf="firstName.errors.pattern">Pattern is not followed.</span>
+            </div>
+        </div>
+    </div>
+    <fieldset>
+        <div class="form-group">
+            <label for="comment">Comment</label>
+            <textarea ngModel name="comment" id="comment" class="form-control" cols="30" rows="10"></textarea>
+        </div>
+        <div class="checkbox">
+            <label>
+              <input ngModel type="checkbox" name="isSubscribed" />
+              Subscribe for the email
+            </label>
+        </div>
+        <label> Contact Method</label>
+        <div class="form-group">
+            <select ngModel name="selectMethods" id="selectMethods" class="form-control">
+              <option value=""></option>
+              <option  
+                *ngFor="let selectMethod of selectMethods" 
+                [ngValue]="selectMethod">
+                {{ selectMethod.name }}
+              </option> 
+            </select>
+        </div>
+        <label>Payment Method</label>
+        <div class="radio" *ngFor="let method of paymentMethod">
+            <label>
+              <input type="radio" ngModel name="paymentMethod" [value]="method.id" />{{ method.name }}
+            </label>
+        </div>
+
+        <div class="form-group">
+            {{f.value | json}}
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+        </div>
+
+    </fieldset>
+</form>

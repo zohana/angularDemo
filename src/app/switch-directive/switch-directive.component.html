@@ -1,0 +1,21 @@
+<ul class="nav nav-pills">
+    <li [class.active]="viewMode == 'Map'">
+        <a (click)="viewMode = 'Map'">Map View</a>
+    </li>
+    <li [class.active]="viewMode == 'List'">
+        <a (click)="viewMode = 'List'">List View</a>
+    </li>
+</ul>
+
+<div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'Map'">
+        <p>Map content here...</p>
+    </div>
+    <div *ngSwitchCase="'List'">
+        <p>List content here...</p>
+    </div>
+    <div *ngSwitchCaseDefault>
+        <p>Some content here....</p>
+    </div>
+
+</div>

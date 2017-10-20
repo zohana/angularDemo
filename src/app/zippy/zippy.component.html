@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+    <div class="panel-heading" (click)="onClickPanelHeader()">
+        {{ title }}
+        <i class="glyphicon" [class.glyphicon-chevron-down]="active" [class.glyphicon-chevron-up]="!active"> </i>
+    </div>
+    <div class="panel-body" [class.notShow]="active">
+        <ng-content></ng-content>
+    </div>
+</div>

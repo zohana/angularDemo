@@ -1,0 +1,8 @@
+<h2>Favourite star component</h2>
+<div>
+    <span (click)="onClicked()">
+      <i class="glyphicon" 
+        [ngClass]="{'glyphicon-star-empty':!isClicked,
+      'glyphicon-star':isClicked}"></i>
+    </span>
+</div>

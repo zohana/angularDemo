@@ -1,0 +1,11 @@
+.is-clicked {
+    color: deeppink;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.not-clicked {
+    color: gray;
+    font-size: 30px;
+    cursor: pointer;
+}

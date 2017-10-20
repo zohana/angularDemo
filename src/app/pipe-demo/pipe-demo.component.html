@@ -1,0 +1,9 @@
+<div>
+    <h2>Pipe Demo</h2>
+    <p>{{ text | summary : 30}}</p>
+    <p>{{ course.title | uppercase }}</p>
+    <p>{{ course.subscribers | number }}</p>
+    <p>{{ course.price | currency: 'CAD' : true}}</p>
+    <p>{{ course.rating | number: '1.2-2' }}</p>
+    <p>{{ course.date | date: 'shortDate' }}</p>
+</div>
